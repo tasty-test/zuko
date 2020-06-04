@@ -1,6 +1,6 @@
 # Introducing Zuko
 
-zuko: I'm here to solve problems in little doses.:neutral_face:
+zuko: I'm here to solve problems, in little doses.:neutral_face:
 
 ## install
 

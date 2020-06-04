@@ -9,8 +9,9 @@ export class Clean extends CommonCommands {
     this.action(({ recursive }, name: string, args: string[]) => {
       if (name === "file") console.log(`cleaning file ${args ? args : ""}`);
       if (name === "folder") console.log(`cleaning folder ${args ? args : ""}`);
-      if (name === "browser")
+      if (name === "browser") {
         console.log(`cleaning browser ${args ? args : ""}`);
+      }
     });
   }
 }
