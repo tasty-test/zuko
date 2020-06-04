@@ -6,17 +6,18 @@ import {
 } from "https://deno.land/x/cliffy/flags.ts";
 
 export class EmailType extends Type<string | undefined> {
-  protected emailRegex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  protected emailRegex: RegExp =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   parse(
     option: IFlagOptions,
     arg: IFlagArgument,
-    value: string | false
+    value: string | false,
   ): string | undefined {
     if (value) {
       if (!this.emailRegex.test(value.toLowerCase())) {
         throw new Error(
-          `Option --${option.name} must be a valid email but got: ${value}`
+          `Option --${option.name} must be a valid email but got: ${value}`,
         );
       }
     }

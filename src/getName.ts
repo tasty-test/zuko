@@ -10,12 +10,12 @@ export const name = (): ITypeHandler<string | undefined> => {
   return (
     option: IFlagOptions,
     arg: IFlagArgument,
-    value: string | false
+    value: string | false,
   ): string | undefined => {
     if (value) {
       if (!nameRegex.test(value.toLowerCase())) {
         throw new Error(
-          `Option --${option.name} must be a valid name but got: ${value}`
+          `Option --${option.name} must be a valid name but got: ${value}`,
         );
       }
     }
