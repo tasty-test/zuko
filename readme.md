@@ -1,3 +1,9 @@
 # Introducing Zuko
 
-zuko - i'm here to solve problem in little doses.:neutral_face:
+zuko: I'm here to solve problems in little doses.:neutral_face:
+
+## install
+
+```bash
+deno install --allow-net --allow-read -allow-write --allow-env https://raw.githubusercontent.com/sanihaq/zuko/master/zuko.ts
+```
